@@ -1,5 +1,8 @@
 # DAY 0
+<details>
+    <summary>
 Yosys  
+        </summary>
 I installed Yosys using the following commands:  
 
 ```
@@ -16,7 +19,7 @@ $ sudo make install
 ```
 Below is the screenshot showing successfull launch  
 ![Screenshot from 2023-08-01 16-03-00](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/fb581d7c-6b2c-46b2-bdbf-7c7918120f3d)
-
+</details>
 
 iverilog  
 verilog is installed using the following command  
