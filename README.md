@@ -1,4 +1,4 @@
-# DAY 0
+# DAY 0 Software Installation
 <details>
     <summary>
 Yosys  
