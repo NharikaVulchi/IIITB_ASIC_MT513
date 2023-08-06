@@ -70,4 +70,20 @@ $make
 ```
 Screenshot showing successful installation
 ![Screenshot from 2023-08-03 19-29-33](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/40c8e64b-f50a-4946-9738-fd40501accd8)
+</details> 
+<details>
+    <summary>
+        NGSPICE
+    </summary>
+Dowmload the tarball from https://sourceforge.net/projects/ngspice/files/ and use the following code to unpack and install ngspice:
+
+```
+$ tar -zxvf ngspice-37.tar.gz
+$ cd ngspice-37
+$ mkdir release
+$ cd release
+$ ../configure  --with-x --with-readline=yes --disable-debug
+$ make
+$ sudo make install
+```
 </details>
