@@ -68,4 +68,6 @@ $cd build
 $cmake ..
 $make
 ```
+Screesnhot showing successful installation
+![Screenshot from 2023-08-03 19-29-33](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/40c8e64b-f50a-4946-9738-fd40501accd8)
 </details>
