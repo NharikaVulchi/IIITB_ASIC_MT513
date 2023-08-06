@@ -143,7 +143,7 @@ $sudo groupadd docker
 $sudo usermod -aG docker $USER
 $sudo reboot
 ```
-After system reboot check for installation using:
+After system reboot, check for installation using:
 ```
 $sudo docker run hello-world
 ```
