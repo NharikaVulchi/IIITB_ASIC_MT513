@@ -121,6 +121,8 @@ Screenshot of installation:
     <summary>
         OpenLANE
     </summary>
+
+
 Pre-installation steps:
 ```
 $sudo apt-get update
