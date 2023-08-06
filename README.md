@@ -95,6 +95,7 @@ Screenshot showing successful installation:
     <summary>
         Magic
     </summary>
+```
 Install magic using the following code snippet:
 $   sudo apt-get install m4
 $   sudo apt-get install tcsh
@@ -109,5 +110,6 @@ $  cd magic
 $./configure
 $make
 $make install
+```
 
 </details>
