@@ -112,5 +112,7 @@ $./configure
 $make
 $make install
 ```
+Screenshot of installation:
+![Screenshot from 2023-08-03 20-23-37](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/c6b967d1-5b7e-4814-abf3-13fae2b6fa81)
 
 </details>
