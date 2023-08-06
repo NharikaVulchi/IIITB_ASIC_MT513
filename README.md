@@ -98,16 +98,16 @@ Screenshot showing successful installation:
 
 Install magic using the following code snippet:
 ```
-$   sudo apt-get install m4
-$   sudo apt-get install tcsh
-$   sudo apt-get install csh
-$   sudo apt-get install libx11-dev
-$   sudo apt-get install tcl-dev tk-dev
-$   sudo apt-get install libcairo2-dev
-$   sudo apt-get install mesa-common-dev libglu1-mesa-dev
-$   sudo apt-get install libncurses-dev
-$  git clone https://github.com/RTimothyEdwards/magic
-$  cd magic
+$sudo apt-get install m4
+$sudo apt-get install tcsh
+$sudo apt-get install csh
+$sudo apt-get install libx11-dev
+$sudo apt-get install tcl-dev tk-dev
+$sudo apt-get install libcairo2-dev
+$sudo apt-get install mesa-common-dev libglu1-mesa-dev
+$sudo apt-get install libncurses-dev
+$git clone https://github.com/RTimothyEdwards/magic
+$cd magic
 $./configure
 $make
 $make install
@@ -115,4 +115,45 @@ $make install
 Screenshot of installation:
 ![Screenshot from 2023-08-03 20-23-37](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/c6b967d1-5b7e-4814-abf3-13fae2b6fa81)
 
+</details>
+
+<details>
+    <summary>
+        OpenLANE
+    </summary>
+Pre-installation steps:
+```
+$sudo apt-get update
+$sudo apt-get upgrade
+$sudo apt install -y build-essential python3 python3-venv python3-pip make git
+```
+
+Docker Installation:
+```
+$sudo apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+$echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+$sudo apt update
+$sudo apt install docker-ce docker-ce-cli containerd.io
+$sudo docker run hello-world
+
+$sudo groupadd docker
+$sudo usermod -aG docker $USER
+$sudo reboot
+```
+After system reboot check for installation using:
+```
+$sudo docker run hello-world
+```
+
+Steps to install PDKs and Tools:
+```
+$cd $HOME
+$git clone https://github.com/The-OpenROAD-Project/OpenLane
+$cd OpenLane
+$make
+$make test
+```
 </details>
