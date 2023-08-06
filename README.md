@@ -24,7 +24,9 @@ Below is the screenshot showing successfull launch
     <summary>
 iverilog  
     </summary>
-verilog is installed using the following command  
+verilog is installed using the following command 
+
+    
 ```
 sudo apt-get install iverilog
 Screenshot of successfull installation
