@@ -27,10 +27,9 @@ iverilog
 verilog is installed using the following command 
 
     
-```
+
 $ sudo apt-get install iverilog
 
-```
 Screenshot of successfull installation
 ![Screenshot from 2023-08-01 16-03-21](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/b8d04ceb-79a9-4d3a-aa28-5dad568500a9)
 </details>
