@@ -86,4 +86,8 @@ $ ../configure  --with-x --with-readline=yes --disable-debug
 $ make
 $ sudo make install
 ```
+Screenshot showing successful installation:
+
+
+![Screenshot from 2023-08-03 19-20-49](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/a56e723d-878b-444f-82c8-a7a63dd2a615)
 </details>
