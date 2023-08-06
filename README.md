@@ -56,17 +56,13 @@ Install the dependencies using the following command:
 
     
     ```
-    
     $ sudo apt-get install cmake clang gcc tcl swig bison flex 
     ```
 
     
 Install OpenSTA using the below code:
 
-
-    ```
-
-    
+```
     $ git clone https://github.com/The-OpenROAD-Project/OpenSTA.git
 $cd OpenSTA
 $mkdir build
