@@ -39,8 +39,10 @@ Screenshot of successfull installation
 gtkwave
     </summary>
 installation steps
+
+    
 ```
-sudo apt-get install gtkwave
+$ sudo apt-get install gtkwave
 ```
 ![Screenshot from 2023-08-01 16-03-35](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/ae5859fc-87db-4f9d-948b-a1a20f28ed24)
 ![Screenshot from 2023-08-01 16-03-49](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/2e1bbbfd-b976-45f4-b460-92bc185b882e)
@@ -56,7 +58,7 @@ Install the dependencies using the following command:
     
     ```
     
-    sudo apt-get install cmake clang gcc tcl swig bison flex 
+    $ sudo apt-get install cmake clang gcc tcl swig bison flex 
     ```
 
     
@@ -66,11 +68,11 @@ Install OpenSTA using the below code:
     ```
 
     
-    git clone https://github.com/The-OpenROAD-Project/OpenSTA.git
-cd OpenSTA
-mkdir build
-cd build
-cmake ..
-make
+    $ git clone https://github.com/The-OpenROAD-Project/OpenSTA.git
+$cd OpenSTA
+$mkdir build
+$cd build
+$cmake ..
+$make
     ```
 </details>
