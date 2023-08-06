@@ -78,8 +78,8 @@ Screenshot showing successful installation
 Dowmload the tarball from https://sourceforge.net/projects/ngspice/files/ and use the following code to unpack and install ngspice:
 
 ```
-$ tar -zxvf ngspice-37.tar.gz
-$ cd ngspice-37
+$ tar -zxvf ngspice-40.tar.gz
+$ cd ngspice-40
 $ mkdir release
 $ cd release
 $ ../configure  --with-x --with-readline=yes --disable-debug
@@ -90,4 +90,24 @@ Screenshot showing successful installation:
 
 
 ![Screenshot from 2023-08-03 19-20-49](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/a56e723d-878b-444f-82c8-a7a63dd2a615)
+</details>
+<details>
+    <summary>
+        Magic
+    </summary>
+Install magic using the following code snippet:
+$   sudo apt-get install m4
+$   sudo apt-get install tcsh
+$   sudo apt-get install csh
+$   sudo apt-get install libx11-dev
+$   sudo apt-get install tcl-dev tk-dev
+$   sudo apt-get install libcairo2-dev
+$   sudo apt-get install mesa-common-dev libglu1-mesa-dev
+$   sudo apt-get install libncurses-dev
+$  git clone https://github.com/RTimothyEdwards/magic
+$  cd magic
+$./configure
+$make
+$make install
+
 </details>
