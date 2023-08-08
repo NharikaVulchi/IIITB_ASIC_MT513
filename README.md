@@ -189,8 +189,6 @@ This will install all the necessary code files and libraries into your system wh
     <summary>
         Simulation of verilog code and visualizing the results
     </summary>
-
-    
     Use the folllowing commands to load the file "good_mux.v" into iverilog and dump the vcd file to gtkwave 
     ```
     $ iverilog good_mux.v tb_good_mux.v
