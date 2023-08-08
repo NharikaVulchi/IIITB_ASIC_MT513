@@ -194,11 +194,11 @@ This will install all the necessary code files and libraries into your system wh
     Use the folllowing commands to load the file "good_mux.v" into iverilog and dump the vcd file to gtkwave 
 
     
-    ```
-    $iverilog good_mux.v tb_good_mux.v
-    $./a.out
-    $gtkwave tb_good_mux.vcd
-    ```
+```
+$iverilog good_mux.v tb_good_mux.v
+$./a.out
+$gtkwave tb_good_mux.vcd
+```
     The output of 2x1 MUX is visualised in gtkwave window as shown below:
     
 
