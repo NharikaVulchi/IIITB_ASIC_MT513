@@ -176,12 +176,14 @@ Iverilog is a Verilog simulation and synthesis tool, enabling digital design ver
     <summary>
         Pre working steps
     </summary>
+    Clone to the github repository https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git using the following command
 
     
-    Clone to the github repository https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git using the following command
     ```
    $ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
     ```
+
+    
 This will install all the necessary code files and libraries into your system which are used for the synthesis and generation.
 </details>
 
@@ -197,10 +199,8 @@ This will install all the necessary code files and libraries into your system wh
     $./a.out
     $gtkwave tb_good_mux.vcd
     ```
-
-    
     The output of 2x1 MUX is visualised in gtkwave window as shown below:
-    ![Screenshot from 2023-08-08 18-52-39](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/de49c815-37ba-47d0-b252-756d4bc6972e)
+    
 
 
 </details>
