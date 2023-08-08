@@ -171,3 +171,34 @@ $make test
     </summary>
 Iverilog is a Verilog simulation and synthesis tool, enabling digital design verification. GTKWave is a waveform viewer for analyzing simulation results. Yosys is a synthesis tool that converts Verilog designs into gate-level representations, facilitating hardware synthesis. Simulation of a 2x1 MUX is shown in this section using iverilog and gtkwave, design is further synthesized using yosys and a gate level representation of MUX is viewed.
 </details>
+
+<details>
+    <summary>
+        Pre working steps
+    </summary>
+
+    
+    Clone to the github repository https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git using the following command
+    ```
+   $ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+    ```
+This will install all the necessary code files and libraries into your system which are used for the synthesis and generation.
+</details>
+
+<details>
+    <summary>
+        Simulation of verilog code and visualizing the results
+    </summary>
+
+    
+    Use the folllowing commands to load the file "good_mux.v" into iverilog and dump the vcd file to gtkwave 
+    ```
+    $ iverilog good_mux.v tb_good_mux.v
+    $ ./a.out
+    $ gtkwave tb_good_mux.vcd
+    ```
+    The output of 2x1 MUX is visualised in gtkwave window as shown below:
+    ![Screenshot from 2023-08-08 18-52-39](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/de49c815-37ba-47d0-b252-756d4bc6972e)
+
+
+</details>
