@@ -205,5 +205,18 @@ The output of 2x1 MUX is visualised in gtkwave window as shown below:
  ![Screenshot from 2023-08-08 18-52-39](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/d24e114c-b4c2-4238-9ae0-b6609994e851)
 
 
+</details>
+<details>
+    <summary>
+        Synthesis of the RTL design using Yosys
+    </summary>
+Move to the lib directory and invoke yosys to generate the netlist of our design using the following commands:
 
+```
+yosys> read_liberty -lib <path to lib file>
+yosys> read_verilog <path to verilog file>
+yosys> synth -top <top_module_name>
+yosys> abc -liberty <path to lib file>
+yosys> show
+```
 </details>
