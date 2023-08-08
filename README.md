@@ -193,9 +193,9 @@ This will install all the necessary code files and libraries into your system wh
 
     
     ```
-    $ iverilog good_mux.v tb_good_mux.v
-    $ ./a.out
-    $ gtkwave tb_good_mux.vcd
+    $iverilog good_mux.v tb_good_mux.v
+    $./a.out
+    $gtkwave tb_good_mux.vcd
     ```
 
     
