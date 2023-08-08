@@ -195,9 +195,9 @@ This will install all the necessary code files and libraries into your system wh
 
     
 ```
-$iverilog good_mux.v tb_good_mux.v
-$./a.out
-$gtkwave tb_good_mux.vcd
+iverilog good_mux.v tb_good_mux.v
+./a.out
+gtkwave tb_good_mux.vcd
 ```
 
 
@@ -210,13 +210,30 @@ The output of 2x1 MUX is visualised in gtkwave window as shown below:
     <summary>
         Synthesis of the RTL design using Yosys
     </summary>
-Move to the lib directory and invoke yosys to generate the netlist of our design using the following commands:
+Move to the lib directory and invoke yosys to generate the synthesis of our design using the following commands:
 
 ```
-yosys> read_liberty -lib <path to lib file>
-yosys> read_verilog <path to verilog file>
+yosys> read_liberty -lib <give the path to lib file>
+yosys> read_verilog <give the path to verilog file>
 yosys> synth -top <top_module_name>
-yosys> abc -liberty <path to lib file>
+yosys> abc -liberty <give the path to lib file>
 yosys> show
 ```
+
+The below figure shows our output synthesis design:
+![Screenshot from 2023-08-08 19-38-49](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/d9c8403f-4030-49bd-9b69-c86b8876e95d)
+This figure shows the results for the cells used:
+![Screenshot from 2023-08-08 19-37-17](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/6fe8760e-546e-40d2-b2e4-b9429e05fd04)
+
+Run the following code to generate the netlist file :
+
+
+```
+yosys> write_verilog good_mux_netlist.v
+yosys> write_verilog -noattr good_mux_netlist.v
+```
+The below image shows the netlist file:
+![Screenshot from 2023-08-08 19-57-50](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/0c3726d3-3c1f-47ad-b424-0bdf310ca367)
+
+
 </details>
