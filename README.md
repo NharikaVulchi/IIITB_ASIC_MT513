@@ -190,11 +190,15 @@ This will install all the necessary code files and libraries into your system wh
         Simulation of verilog code and visualizing the results
     </summary>
     Use the folllowing commands to load the file "good_mux.v" into iverilog and dump the vcd file to gtkwave 
+
+    
     ```
     $ iverilog good_mux.v tb_good_mux.v
     $ ./a.out
     $ gtkwave tb_good_mux.vcd
     ```
+
+    
     The output of 2x1 MUX is visualised in gtkwave window as shown below:
     ![Screenshot from 2023-08-08 18-52-39](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/de49c815-37ba-47d0-b252-756d4bc6972e)
 
