@@ -247,6 +247,6 @@ The below image shows the netlist file:
         References
     </summary>
 
+    
 https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
-
 </details>
