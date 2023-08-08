@@ -154,7 +154,14 @@ Steps to install PDKs and Tools:
 $cd $HOME
 $git clone https://github.com/The-OpenROAD-Project/OpenLane
 $cd OpenLane
+
+
+
 $make
 $make test
 ```
 </details>
+
+
+
+#**DAY 1 Working with Yosys and iverilog**
