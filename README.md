@@ -164,4 +164,4 @@ $make test
 
 
 
-#**DAY 1 Working with Yosys and iverilog**
+# DAY 1 Working with Yosys and iverilog
