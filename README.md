@@ -222,6 +222,8 @@ yosys> show
 
 
 The below figure shows our output synthesis design:
+
+
 ![Screenshot from 2023-08-08 19-38-49](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/d9c8403f-4030-49bd-9b69-c86b8876e95d)
 This figure shows the results for the cells used:
 ![Screenshot from 2023-08-08 19-37-17](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/6fe8760e-546e-40d2-b2e4-b9429e05fd04)
@@ -238,6 +240,8 @@ yosys> write_verilog -noattr good_mux_netlist.v
 
 
 The below image shows the netlist file:
+
+
 ![Screenshot from 2023-08-08 19-57-50](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/0c3726d3-3c1f-47ad-b424-0bdf310ca367)
 
 
