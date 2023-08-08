@@ -165,3 +165,9 @@ $make test
 
 
 # DAY 1 Working with Yosys and iverilog
+<details>
+    <summary>
+        Introduction
+    </summary>
+Iverilog is a Verilog simulation and synthesis tool, enabling digital design verification. GTKWave is a waveform viewer for analyzing simulation results. Yosys is a synthesis tool that converts Verilog designs into gate-level representations, facilitating hardware synthesis. Simulation of a 2x1 MUX is shown in this section using iverilog and gtkwave, design is further synthesized using yosys and a gate level representation of MUX is viewed.
+</details>
