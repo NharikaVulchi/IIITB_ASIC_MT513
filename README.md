@@ -545,4 +545,87 @@ The above code has a synthesis simulation mismatch because -->
 1. Synthesiser looks at the functionality and will create a MUX
 2. Whereas a simulator will simulate it consdiering it as double edge flop.
 
+**Blocking and Non-blocking statements in verilog**
+
+1. Blocking Assignment [ = ]
+
+
+Executes the statements sequentially
+
+2. Non Blocking Assignment [ <= ]
+
+Executes the statements in parallel. RHS is executed and assigned to LHS
+
+**Caveats with Blocking Statements**
+
+EXAMPLE 1: Consider the below code:
+
+
+```
+
+if (reset)
+  begin
+    q0=1'b0;
+    q =1'b0;
+  end
+else
+  begin
+    q=q0;
+    q0=d;
+  end
+```
+
+This will evaluate to a design shown in the below figure:
+
+
+
+
+if (reset)
+  begin
+    q0=1'b0;
+    q =1'b0;
+  end
+else
+  begin
+    q0=d;
+    q=q0;
+  end
+```
+
+This will evaluate to a design shown in the below figure:
+
+
+So the usage of non-blocking statements become beneficial in sequential circuits.
+
+EXAMPLE 2: Consider the below code which is used to design y=(a+b)&c
+
+
+```
+always @(*)
+begin
+  y  =  q0 & c;
+  q0 =  a  | b;
+end
+```
+
+Here, the previous value of q0 is assigned to y, before the actual value of q0 is evaluated. So it will mimic a flop, because old value is being stored.
+
+
+```
+always @(*)
+begin
+  q0 =  a  | b;
+  y  =  q0 & c;
+end
+```
+
+Here, the latest value of q0 is used in simulation.
+
+The synthesis of both the codes give the same synthesis output which i not actually happening, so there is a synthesis-simulation mismatch.
+
+So it is important to run GLS and match the output of synthesis and simulation.
+
+
+
+
 
