@@ -343,6 +343,8 @@ The figure shows a D flip-flop
 --> Coding flops:
 
 1. Asynchronous reset
+
+   
 Irrespective of the clk signal, if the reset value is high, flop output comes down to zero.
 
 Verilog code describing D flop with asynchronous reset:
@@ -359,6 +361,8 @@ endmodule
 ```
 
 2. Synchronous reset
+
+
 Reset awaits the clock edge to drive the output to low.
 
 Verilog code describing D flop with synchronous reset:
@@ -373,6 +377,30 @@ begin
 end
 endmodule
 ```
+
+3. Asynchronous/Synchronous reset
+
+Flop is triggered with both the asynchronous and synchronous signals explained in the below figure.
+
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/dfb8425c-ad23-467b-a416-aece22c09cbd)
+
+Verilog code testing the same:
+
+```
+module dff_asyncres_syncres ( input clk , input async_reset , input sync_reset , input d , output reg q );
+always @ (posedge clk , posedge async_reset)
+begin
+    if(async_reset)
+            q <= 1'b0;
+    else if (sync_reset)
+            q <= 1'b0;
+    else
+            q <= d;
+end
+endmodule
+```
+
 
 
 
