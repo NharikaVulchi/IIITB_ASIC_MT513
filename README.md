@@ -432,7 +432,7 @@ end
 endmodule
 ```
 
-<u>--> Optimization <\u>
+<u>--> Optimization </u>
 
 
 **illustration 1**
