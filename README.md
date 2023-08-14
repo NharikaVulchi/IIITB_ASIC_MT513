@@ -323,4 +323,20 @@ This is done using the following command ```synth -top <sub-module name> ```
 
 </details>
 
+<details>
+<summary>
+Flop coding styles
+</summary>
+Why do we use flip-flops?
+There is a propogation delay in combinational circuits, there is a glitch in the output due to this delay. More the amount of combinational circuits, more is the number of glitches we see. 
+So to overcome this problem in the output of a circuit, we introduce a storage element, a flop, in between the combinational circuits which gives a stable output always.This is because a flop is triggered only on the positive edge of the clock.
 
+Initialisation of the flop is done with the control pins on the flop which are reset/set.
+
+
+below figure shows a D flip-flop
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/1d4911bd-0a8f-4d59-996b-d22101df451c)
+
+
+
+</details>
