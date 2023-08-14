@@ -284,7 +284,8 @@ Leakage power, delay, area, power ports of all the cells is specified within the
 <summary>
 Hierarchial vs Flat Synthesis
 </summary>
-Hierarchial Synthesis: Hierarchical synthesis in physical design involves breaking down the entire chip design into smaller, manageable modules or blocks. Each module is designed and optimized separately, and then these modules are integrated at a higher level to create the complete chip layout. This approach allows for better control over the design process, reduces complexity, and enables efficient reuse of standardized blocks. All the modules are preserved
+Hierarchial Synthesis: Hierarchical synthesis in physical design involves breaking down the entire chip design into smaller, manageable modules or blocks. Each module is designed and optimized separately, and then these modules are integrated at a higher level to create the complete chip layout. This approach allows for better control over the design process, reduces complexity, and enables efficient reuse of standardized blocks. All the modules are preserved.
+
 
 Flat Synthesis: Flat synthesis in physical design involves designing the entire chip layout as a single, monolithic entity without explicit hierarchical divisions. This approach treats the entire design as a cohesive unit, potentially resulting in a simpler layout. It flattens out the modules into gates with higher efficiency and performance.
 
@@ -296,6 +297,20 @@ The below screenshots demonstrate the gate level simulation for Hierarchial and 
 
 ![Screenshot from 2023-08-14 15-17-48](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/3612aa17-576c-4ac6-b888-a434376b82fe)
 
+
+Code: Invoke yosys and use the following code for viewing the ouput
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog multiple_modules.v
+synth -top multiple_modules
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+show 
+
+//flat synthesis
+flatten
+show
+```
 
 </details>
 
