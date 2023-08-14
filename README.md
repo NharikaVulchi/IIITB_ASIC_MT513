@@ -532,13 +532,17 @@ else
 end
 ```
 
-This can be corrected by using the following command
+This can be corrected by using the following command.
+This makes sure that output is sensitive to any change in input
 
 
 ```
 always (*)
 ```
 
-This makes sure that output is sensitive to any change in input
+
+The above code has a synthesis simulation mismatch because -->
+1. Synthesiser looks at the functionality and will create a MUX
+2. Whereas a simulator will simulate it consdiering it as double edge flop.
 
 
