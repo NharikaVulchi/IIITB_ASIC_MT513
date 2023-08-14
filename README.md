@@ -473,3 +473,12 @@ The final gate level synthesis:
 
 
 </details>
+
+## DAY 3 COMBINATIONAL AND SEQUENTIAL OPTIMIZATIONS
+
+**COMBINATIONAL LOGIC OPTIMIZATION**
+ Minimizing the logic to get most optimized design which is efficient in terms of area and power
+
+ Techniques for optimization:
+1. Maintaining constant propogation
+2. Boolean optimization using K-Map
