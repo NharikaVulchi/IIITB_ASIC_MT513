@@ -532,6 +532,14 @@ else
 end
 ```
 
+Simulation using gtkwave:
+
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/43ef2523-b96f-49c6-ac36-cb214c520dfa)
+
+
+
+
 This can be corrected by using the following command.
 This makes sure that output is sensitive to any change in input
 
@@ -624,6 +632,9 @@ Here, the latest value of q0 is used in simulation.
 The synthesis of both the codes give the same synthesis output which i not actually happening, so there is a synthesis-simulation mismatch.
 
 So it is important to run GLS and match the output of synthesis and simulation.
+
+
+
 
 
 
