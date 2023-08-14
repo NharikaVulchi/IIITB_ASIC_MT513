@@ -432,6 +432,42 @@ end
 endmodule
 ```
 
+<u>--> Optimization <\u>
+
+
+**illustration 1**
+A 3 bit number multiplied by 2 gives a 4 bit output,whose first 3 MSB bits are the input bits and the LSB is 0. Thus, output is input appended with zero in the end. This is explained in the below truth table. Taking note of this we can reduce the hardware usage in our design.
+
+	Input (3 bits)	    Output (4 bits)
+	  000			0000
+	  001			0010
+	  010			0100
+	  011			0110
+	  100			1000
+	  101			1010
+	  110			1100
+	  111			1110
+
+
+Verilog code for implementing:
+
+```
+module mul2 (input [2:0] a, output [3:0] y);
+assign y = a * 2;
+endmodule
+```
+
+When we synthesise the above code we donot see any cells which are being in use:
+
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/2481d7a7-7efc-4405-a222-ad0554e701c3)
+
+
+The final gate level synthesis:
+
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/1dfcf7c4-92f4-4b5f-bfbf-f3eda5f69d0a)
+
 
 
 
