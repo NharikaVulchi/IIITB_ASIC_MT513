@@ -480,5 +480,65 @@ The final gate level synthesis:
  Minimizing the logic to get most optimized design which is efficient in terms of area and power
 
  Techniques for optimization:
+
+ 
 1. Maintaining constant propogation
 2. Boolean optimization using K-Map
+
+# DAY 4 INTRODUCTION TO GLS AND SYNTHESIS-SIMULATION MISMATCH
+
+**Gate Level Synthesis (GLS):**
+
+1. We will run the test bench with netlist as design under test.
+2. Netlist is logically same as RTL code
+3. Gate level verilog models can be timing aware or functional.
+
+
+Why GLS?
+
+1. To verify the logical correctness of the design after synthesis
+2. To meet the timing requirements of the design, this is done using delay annotation.
+3. To test the funcionality of the netlist because there can be synthesis-simulation mismatch
+
+The below figure depicts the GLS synthesis flow:
+
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/3f95024b-bda4-4b11-b2eb-7089f193cd1b)
+
+
+**Synthesis Simulation Mismatch**
+
+What are the causes?
+
+
+1. Missing sensitivity list
+2. Blocking vs Non-Blocking Assignment
+3. Non standard verilog coding
+
+**Missing sensitivity list**
+
+Simulator always looks for a change in activity.
+
+Observing the below code, we find that always block is evaluating only when 'sel' is changing. So when there is a change in the input , the change is not reflected in ouput until there is a change in 'sel'.This does not give us the desired output.
+
+
+```
+always @(sel)
+begin
+if (sel)
+ out = i1;
+else
+ out = i0;
+end
+```
+
+This can be corrected by using the following command
+
+
+```
+always (*)
+```
+
+This makes sure that output is sensitive to any change in input
+
+
