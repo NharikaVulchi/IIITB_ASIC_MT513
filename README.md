@@ -360,6 +360,11 @@ end
 endmodule
 ```
 
+Simulation in gtkwave:
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/8258b766-c2de-4cae-b43b-7401a6a91894)
+
+
 2. Synchronous reset
 
 
@@ -377,6 +382,12 @@ begin
 end
 endmodule
 ```
+
+
+Simulation in gtkwave:
+
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/859dcd47-2368-4f24-a9fe-eb088bd29554)
 
 3. Asynchronous/Synchronous reset
 
