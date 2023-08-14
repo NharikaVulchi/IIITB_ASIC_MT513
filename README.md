@@ -256,3 +256,12 @@ The below image shows the netlist file:
     
 https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
 </details>
+
+
+# DAY 2 
+<details>
+<summary>
+Introduction to dot lib
+</summary>
+We use the library "sky130_fd_sc_hd__tt_025C_1v80" for the RTL synthesis. This is a SkyWater PDK. It specifies the operating conditions such as process, voltage and temperature of the fabrication.
+The below figure shows the specifications
