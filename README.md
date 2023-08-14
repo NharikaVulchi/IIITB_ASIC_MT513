@@ -402,6 +402,13 @@ Simulation in gtkwave:
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/3558bdbe-d61e-4ddd-ba4d-9b428cb44c41)
 
 
+Synthesis:
+
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/b07f8ac9-34c2-4443-8f8d-06b19b78ee3d)
+
+
+
 **3. Asynchronous/Synchronous reset**
 
 Flop is triggered with both the asynchronous and synchronous signals explained in the below figure.
