@@ -327,7 +327,7 @@ This is done using the following command ```synth -top <sub-module name> ```
 <summary>
 Flop coding styles
 </summary>
-Why do we use flip-flops?
+--> Why do we use flip-flops?
 
     
 There is a propogation delay in combinational circuits, there is a glitch in the output due to this delay. More the amount of combinational circuits, more is the number of glitches we see. 
@@ -338,6 +338,41 @@ Initialisation of the flop is done with the control pins on the flop which are r
 
 The figure shows a D flip-flop
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/1d4911bd-0a8f-4d59-996b-d22101df451c)
+
+
+--> Coding flops:
+
+1. Asynchronous reset
+Irrespective of the clk signal, if the reset value is high, flop output comes down to zero.
+
+Verilog code describing D flop with asynchronous reset:
+```
+ module dff_asyncres ( input clk ,  input async_reset , input d , output reg q );
+always @ (posedge clk , posedge async_reset)
+begin
+	if(async_reset)
+		q <= 1'b0;
+	else	
+		q <= d;
+end
+endmodule
+```
+
+2. Synchronous reset
+Reset awaits the clock edge to drive the output to low.
+
+Verilog code describing D flop with synchronous reset:
+```
+module dff_syncres ( input clk , input async_reset , input sync_reset , input d , output reg q );
+always @ (posedge clk )
+begin
+	if (sync_reset)
+		q <= 1'b0;
+	else	
+		q <= d;
+end
+endmodule
+```
 
 
 
