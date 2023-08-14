@@ -579,7 +579,7 @@ This will evaluate to a design shown in the below figure:
 
 
 
-
+```
 if (reset)
   begin
     q0=1'b0;
