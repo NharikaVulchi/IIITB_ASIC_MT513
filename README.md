@@ -327,7 +327,7 @@ This is done using the following command ```synth -top <sub-module name> ```
 <summary>
 Flop coding styles
 </summary>
---> Why do we use flip-flops?
+<u>--> Why do we use flip-flops?</u>
 
     
 There is a propogation delay in combinational circuits, there is a glitch in the output due to this delay. More the amount of combinational circuits, more is the number of glitches we see. 
@@ -340,9 +340,9 @@ The figure shows a D flip-flop
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/1d4911bd-0a8f-4d59-996b-d22101df451c)
 
 
---> Coding flops:
+<u>--> Coding flops:</u>
 
-1. Asynchronous reset
+**1. Asynchronous reset**
 
    
 Irrespective of the clk signal, if the reset value is high, flop output comes down to zero.
@@ -377,7 +377,7 @@ Synthesis:
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/d0c7f021-dde5-47cf-b8fd-9208311ef67a)
 We see a inverter in the synthesis because the flop used by the tool has a active low reset.
 
-2. Synchronous reset
+**2. Synchronous reset**
 
 
 Reset awaits the clock edge to drive the output to low.
@@ -402,7 +402,7 @@ Simulation in gtkwave:
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/3558bdbe-d61e-4ddd-ba4d-9b428cb44c41)
 
 
-3. Asynchronous/Synchronous reset
+**3. Asynchronous/Synchronous reset**
 
 Flop is triggered with both the asynchronous and synchronous signals explained in the below figure.
 
