@@ -312,6 +312,15 @@ flatten
 show
 ```
 
+We can also synthesise each module at a time. This is called as "sub-module synthesis".This is used when:
+
+
+--> We have multiple instances of the same module 
+
+--> We have a larger design , we break down synthesis to sub-module synthesis to make a detailed picture of the netlist.
+
+This is done using the following command ```synth -top <sub-module name> ```
+
 </details>
 
 
