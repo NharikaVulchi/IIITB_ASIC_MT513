@@ -347,7 +347,7 @@ The figure shows a D flip-flop
    
 Irrespective of the clk signal, if the reset value is high, flop output comes down to zero.
 
-Verilog code describing D flop with asynchronous reset:
+Verilog code describing D flop with asynchronous reset which is positive edge triggered:
 ```
  module dff_asyncres ( input clk ,  input async_reset , input d , output reg q );
 always @ (posedge clk , posedge async_reset)
@@ -360,9 +360,15 @@ end
 endmodule
 ```
 
-Simulation in gtkwave:
+Simulation in gtkwave: Asynchronous reset
 
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/8258b766-c2de-4cae-b43b-7401a6a91894)
+
+
+Simulation in gtkwave: Asynchronous reset
+
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/859dcd47-2368-4f24-a9fe-eb088bd29554)
 
 
 2. Synchronous reset
@@ -370,7 +376,7 @@ Simulation in gtkwave:
 
 Reset awaits the clock edge to drive the output to low.
 
-Verilog code describing D flop with synchronous reset:
+Verilog code describing D flop with synchronous reset which is positive edge triggered:
 ```
 module dff_syncres ( input clk , input async_reset , input sync_reset , input d , output reg q );
 always @ (posedge clk )
@@ -387,7 +393,8 @@ endmodule
 Simulation in gtkwave:
 
 
-![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/859dcd47-2368-4f24-a9fe-eb088bd29554)
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/3558bdbe-d61e-4ddd-ba4d-9b428cb44c41)
+
 
 3. Asynchronous/Synchronous reset
 
@@ -411,6 +418,8 @@ begin
 end
 endmodule
 ```
+
+Simulation in gtkwave:
 
 
 
