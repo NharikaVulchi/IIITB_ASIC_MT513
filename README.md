@@ -371,6 +371,12 @@ Simulation in gtkwave: Asynchronous reset
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/859dcd47-2368-4f24-a9fe-eb088bd29554)
 
 
+Synthesis:
+
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/d0c7f021-dde5-47cf-b8fd-9208311ef67a)
+We see a inverter in the synthesis because the flop used by the tool has a active low reset.
+
 2. Synchronous reset
 
 
@@ -419,7 +425,6 @@ end
 endmodule
 ```
 
-Simulation in gtkwave:
 
 
 
