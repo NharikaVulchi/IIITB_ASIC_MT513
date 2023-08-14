@@ -263,5 +263,13 @@ https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
 <summary>
 Introduction to dot lib
 </summary>
-We use the library "sky130_fd_sc_hd__tt_025C_1v80" for the RTL synthesis. This is a SkyWater PDK. It specifies the operating conditions such as process, voltage and temperature of the fabrication.
-The below figure shows the specifications
+We use the library "sky130_fd_sc_hd__tt_025C_1v80" for the RTL synthesis. This is a SkyWater PDK. It specifies the operating conditions such as process(tt-typical), voltage(1v80) and temperature (025C) of the fabrication.
+The below figure shows the specifications:
+
+    
+![Screenshot from 2023-08-14 14-44-38](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/5d8845d0-99ca-451a-acf2-ca26f7301fd0)
+
+
+</details>
+
+
