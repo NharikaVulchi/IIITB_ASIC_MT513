@@ -634,6 +634,21 @@ The synthesis of both the codes give the same synthesis output which i not actua
 So it is important to run GLS and match the output of synthesis and simulation.
 
 
+# LAB SESSION
+
+**MUX**
+
+
+Simulation of the RTL design:
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/43ef2523-b96f-49c6-ac36-cb214c520dfa)
+
+
+
+Simulation of the netlist design:
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/58de709f-90d3-4ee2-b813-f45fcfa5eb17)
+
+So the code explained in missing ensitivity list shows synthesis-simulation mismatch.
+
 
 
 
