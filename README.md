@@ -272,7 +272,7 @@ The below figure shows the specifications:
 
 Using this lib file, we get access to different types of cells which has vast number of variants in terms of number of inputs and ouputs along with the functionality.
 
-Leakage power, delay, area, power ports of all the cells is specified within the file for all the input combinations of the specified gate.
+Leakage power, delay, area, power ports of all the cells is specified within the file for all the input combinations of the given gate.
 
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/d31acc4b-11f8-414d-a80a-11a8d5ef75e4)
 
