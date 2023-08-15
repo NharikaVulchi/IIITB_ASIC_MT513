@@ -884,6 +884,9 @@ This can be inferred as below:
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/fb8f6838-bc14-4770-934b-609c996c05b1)
 
 
+RTL:
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/b5a1ac1e-5133-4892-a913-d88973e0e464)
+
 
 
 
