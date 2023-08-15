@@ -747,10 +747,12 @@ else
     // Code to be executed if the condition is false
 ```
 
+<details>
 Equivalent hardware design of if else construct:
 
 
 ![Screenshot from 2023-08-15 12-24-32](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/b00167ef-64b9-406d-9e49-f85ae8ac7c7d)
+</details>
 
 
 Caution with if:
