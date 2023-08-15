@@ -1066,7 +1066,7 @@ GLS simulation:
 
 
 
-</details>
+
 
 
 **Illustration 2**: DEMUX using case and for
@@ -1197,7 +1197,7 @@ GLS simulation:
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/2f644d22-7474-4e12-a82d-b6cef6ab29b9)
 
 
-
+</details>
 
 
 
