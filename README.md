@@ -506,6 +506,8 @@ The below figure depicts the GLS synthesis flow:
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/3f95024b-bda4-4b11-b2eb-7089f193cd1b)
 
 </details>
+
+
 **Synthesis Simulation Mismatch**
 
 <details>
@@ -517,6 +519,8 @@ What are the causes?
 3. Non standard verilog coding
 
 </details>
+
+
 **Missing sensitivity list**
 
 
