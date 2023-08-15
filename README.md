@@ -1,4 +1,4 @@
-## DAY 0 Software Installation
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/9e9233db-90d6-4395-bd10-3150cd660dde)## DAY 0 Software Installation
 <details>
     <summary>
 Yosys  
@@ -970,8 +970,9 @@ Sir ouput:
 
 My output:
 
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/b3b6b813-f1c3-46e3-a0ef-668c4dcf9e40)
 
-![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/99bc6441-84b8-4150-98e8-11b1a7b412e0)
+
 
 
 
