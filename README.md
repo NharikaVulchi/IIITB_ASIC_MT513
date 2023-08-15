@@ -572,6 +572,67 @@ Netlist:
 
 
 
+Example 2:
+
+```
+module dff_const2(input clk, input reset, output reg q);
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+		q <= 1'b1;
+	else
+		q <= 1'b1;
+end
+endmodule
+```
+
+
+Synthesis:
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/78d0c079-522a-4f2e-ba26-fbb9e1c184fe)
+
+
+Netlist:
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/8aaeaf50-f2f7-4d3a-aab1-90d4537612c1)
+
+
+Example 3:
+
+```
+	module dff_const5(input clk, input reset, output reg q);
+reg q1;
+always @(posedge clk, posedge reset)
+	begin
+		if(reset)
+		begin
+			q <= 1'b0;
+			q1 <= 1'b0;
+		end
+	else
+		begin
+			q1 <= 1'b1;
+			q <= q1;
+		end
+	end
+endmodule
+```
+
+
+Synthesis:
+
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/103cfaa3-727a-4d13-aa2a-b535022d4f88)
+
+
+Netlist:
+
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/c8d13532-03b0-432b-bf3e-06fec29cb8ec)
+
+
+
+
 ### DAY 4 INTRODUCTION TO GLS AND SYNTHESIS-SIMULATION MISMATCH
 
 **Gate Level Synthesis (GLS):**
