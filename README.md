@@ -869,6 +869,10 @@ Synthesis:
 
 **incomplete case**
 
+
+**illustration 1:** missing case values
+
+
 ```
 module incomp_case (input i0 , input i1 , input i2 , input [1:0] sel, output reg y);
 always @ (*)
@@ -890,6 +894,41 @@ This can be inferred as below:
 
 RTL:
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/b5a1ac1e-5133-4892-a913-d88973e0e464)
+
+</details>
+
+
+**illustration 2** case with default
+
+
+```
+module comp_case (input i0 , input i1 , input i2 , input [1:0] sel, output reg y);
+always @ (*)
+begin
+case(sel)
+	2'b00 : y = i0;
+	2'b01 : y = i1;
+	default : y = i2;
+endcase
+end
+endmodule
+```
+<details>
+Latch is not inferred here, because for the missing case values, **default** is executed.
+The above code has its equivalent hardware implementation as follows:
+
+
+![Screenshot from 2023-08-15 14-30-55](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/a0c389f0-7e12-443a-ae5b-102d2245d7c4)
+
+
+RTL simulation: When **sel** is 10 or 11 **y** is **i2**
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/3d87456a-a008-4d96-bdb1-be337623e049)
+
+
+Synthesis:
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/418fedb2-33a5-4d36-b75d-31f21dd8c0bc)
+
+
 
 </details>
 
