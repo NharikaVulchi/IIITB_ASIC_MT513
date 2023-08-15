@@ -543,6 +543,8 @@ Simulation using gtkwave:
 
 <details>
 
+
+
 This can be corrected by using the following command.
 This makes sure that output is sensitive to any change in input
 
@@ -661,6 +663,8 @@ GLS simulation of Part 1:
 
 We can see that irrespective of expression evaluation , we get the old value of q0 for calculating output.So we can see a synthesis-simulation mismatch for the blocking statement.
 </details>
+
+
 # LAB SESSION
 
 **MUX**
@@ -676,6 +680,8 @@ Simulation of the netlist design:
 
 So the code explained in missing sensitivity list shows synthesis-simulation mismatch.
 </details>
+
+
 **ternary operator**
 <details>
 Consider the below code:
@@ -703,6 +709,8 @@ GLS simulation:
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/f7c896b2-b020-4c7d-96ed-3dab9da913f6)
 
 </details>
+
+
 **Blocking statement simulation synthesis mismatch**
 <details>
 Consider the below code:
