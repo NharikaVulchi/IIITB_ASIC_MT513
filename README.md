@@ -733,8 +733,81 @@ endmodule
 </details>
 
 
+## DAY 5 IF CASS FOR 
 
 
+**if**
+
+Used for priority logic estimation.if statement is used to conditionally execute a block of code based on a given condition.
+
+```
+if (condition)
+    // Code to be executed if the condition is true
+else
+    // Code to be executed if the condition is false
+```
+
+Equivalent hardware design of if else construct:
 
 
+![Screenshot from 2023-08-15 12-24-32](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/b00167ef-64b9-406d-9e49-f85ae8ac7c7d)
+
+
+Caution with if:
+
+
+Inferred Latches(due to inefficient coding) which is due to incomplete if statement.
+
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/cf835dec-7b90-4c1d-a8a5-4abef9e97391)
+
+
+Exception : counter
+
+Consider the below code with incomplete **if**:
+
+```
+always @(posedge clk, posedge reset)
+begin
+ if (reset)
+   count <=3'b000;
+else if(en)
+   count <=count + 1;
+end
+```
+
+Here without the **else** statement, the output is latched on to the previous value which is useful because the ouput should be stable on previous **count** value without **enable** being high.
+
+In a combinational circuit we can not have a inferred latch.
+
+
+**case**
+
+1. if, case are used in **always** block
+2. So we use a **reg** variable
+
+Syntax:
+
+```
+ case(choice)
+choice1: begin
+     --------
+ --------
+ end
+choice2: begin
+ --------
+ --------
+ end
+ default: <statements>
+ endcase
+```
+
+Caveats in **case**
+
+1. incomplete case statements --> can be resolved by default, this do not create inferred latches
+2. partial assignments in case statements --> explained in the below figure, we should ssign all the outputs in all the segments of case.
+3. overlapping **case**
+
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/2c8eb835-3854-4d69-b1b0-6840035aefe1)
 
