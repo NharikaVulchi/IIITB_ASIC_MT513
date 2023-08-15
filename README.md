@@ -649,6 +649,33 @@ Simulation of the netlist design:
 
 So the code explained in missing sensitivity list shows synthesis-simulation mismatch.
 
+**ternary operator**
+Consider the below code:
+
+```
+module ternary_operator_mux (input i0 , input i1 , input sel , output y);
+assign y = sel?i1:i0;
+endmodule
+```
+
+We will pbserve the RTL and GLS simulation
+
+
+RTL simulation result: output follows input according to select line
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/43c1ac68-93f0-477b-a9f9-25c219972e36)
+
+
+
+Synthesis:
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/34594d94-5fab-4db6-acb5-802907f8e8a6)
+
+
+
+GLS simulation:
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/f7c896b2-b020-4c7d-96ed-3dab9da913f6)
+
+
+
 
 
 
