@@ -607,6 +607,8 @@ So the usage of non-blocking statements become beneficial in sequential circuits
 
 EXAMPLE 2: Consider the below code which is used to design y=(a+b)&c
 
+Part 1:
+
 
 ```
 always @(*)
@@ -616,7 +618,7 @@ begin
 end
 ```
 
-Here, the previous value of q0 is assigned to y, before the actual value of q0 is evaluated. So it will mimic a flop, because old value is being stored.
+Here, the previous value of q0 is assigned to y, before the actual value of q0 is evaluated. So here q0 will mimic a flop, because old value is being stored.
 
 
 ```
@@ -629,11 +631,30 @@ end
 
 Here, the latest value of q0 is used in simulation.
 
-The synthesis of both the codes give the same synthesis output which i not actually happening, so there is a synthesis-simulation mismatch.
+The synthesis of both the codes give the same synthesis output which is not actually happening, so there is a synthesis-simulation mismatch.
 
 So it is important to run GLS and match the output of synthesis and simulation.
 
+RTL simulation of Part 1:
 
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/508eec48-1178-4686-be7c-6bdf261e9e2b)
+
+
+Synthesis:
+
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/cfb7204b-54c0-4a24-a322-51a05c099ec7)
+
+
+GLS simulation of Part 1:
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/61ee1f21-315f-4c9f-9dda-0b7d241bd905)
+
+
+
+
+We can see that irrespective of expression evaluation , we get the old value of q0 for calculating output.
 # LAB SESSION
 
 **MUX**
