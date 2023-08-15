@@ -973,6 +973,52 @@ My output:
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/b3b6b813-f1c3-46e3-a0ef-668c4dcf9e40)
 
 
+</details>
+
+**LOOPING CONSTRUCTS**
+
+1. for loop: --> used in **always** block, used for evaluating expressions
+
+<details> 
+Any MUX design can be evauated easily by writing it in a **for** loop.
+
+Example for a 32x1 MUX :
+
+```
+input reg [31:0] inp;
+integer i;
+always @(*)
+begin
+  for (i=0;i<32;i=i+1)
+  begin
+    if(i == sel)
+      y = inp[i];
+  end
+end 
+```
+</details>  
+
+
+2. generate for loop: cannot be used inside **always** block, used for generating/instantiating hardware multiple times
+
+<details>
+
+ 
+instantiating a  **and** gate multiple times
+
+```
+genvar i;
+generate
+  for(i=0;i<8;i=i+1)
+    begin
+      and u_and (.a(inp1[i]) , .b(inp2[i]) , .y(y[i]));
+    end
+endgenerate
+```
+
+
+</details>
+
 
 
 
