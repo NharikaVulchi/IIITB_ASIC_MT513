@@ -654,7 +654,7 @@ GLS simulation of Part 1:
 
 
 
-We can see that irrespective of expression evaluation , we get the old value of q0 for calculating output.
+We can see that irrespective of expression evaluation , we get the old value of q0 for calculating output.So we can see a synthesis-simulation mismatch for the blocking statement.
 # LAB SESSION
 
 **MUX**
