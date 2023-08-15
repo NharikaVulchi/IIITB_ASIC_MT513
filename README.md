@@ -933,3 +933,48 @@ Synthesis: We donot see any latch as seen in earlier case
 </details>
 
 
+**illustration 3**: Partial case: output of **x** is not given clearly
+
+```
+module partial_case_assign (input i0 , input i1 , input i2 , input [1:0] sel, output reg y , output reg x);
+always @ (*)
+begin
+case(sel)
+	2'b00 : begin
+		y = i0;
+		x = i2;
+		end
+	2'b01 : y = i1;
+	default : begin
+         	  x = i1;
+		  y = i2;
+	 	 end
+endcase
+end
+endmodule
+```
+<details>
+Hardware implementation:
+
+ 
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/dd100cf3-9530-4e05-973a-f19d3b277004)
+
+
+Synthesis :
+
+Sir ouput:
+
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/b4e62e90-4c70-40dd-a04f-d791f55013e5)
+
+
+My output:
+
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/99bc6441-84b8-4150-98e8-11b1a7b412e0)
+
+
+
+
+
+
