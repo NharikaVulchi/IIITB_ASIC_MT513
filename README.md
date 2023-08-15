@@ -812,9 +812,11 @@ Caveats in **case**
 1. incomplete case statements --> can be resolved by default, this do not create inferred latches
 2. partial assignments in case statements --> explained in the below figure, we should ssign all the outputs in all the segments of case.
 3. overlapping **case**
-
+<details>
 
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/2c8eb835-3854-4d69-b1b0-6840035aefe1)
+</details>
+
 
 **LAB SESSIONS**
 
