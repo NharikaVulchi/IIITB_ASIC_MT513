@@ -1,4 +1,4 @@
-## DAY 0 Software Installation
+### DAY 0 Software Installation
 <details>
     <summary>
 Yosys  
@@ -164,7 +164,7 @@ $make test
 
 
 
-## DAY 1 Working with Yosys and iverilog
+### DAY 1 Working with Yosys and iverilog
 <details>
     <summary>
         Introduction
@@ -258,7 +258,7 @@ https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
 </details>
 
 
-## DAY 2 TIMING LIBS AND OPTIMIZATION TECHNIQUES
+### DAY 2 TIMING LIBS AND OPTIMIZATION TECHNIQUES
 <details>
 <summary>
 Introduction to dot lib
@@ -474,7 +474,7 @@ The final gate level synthesis:
 
 </details>
 
-## DAY 3 COMBINATIONAL AND SEQUENTIAL OPTIMIZATIONS
+### DAY 3 COMBINATIONAL AND SEQUENTIAL OPTIMIZATIONS
 
 **COMBINATIONAL LOGIC OPTIMIZATION**
  Minimizing the logic to get most optimized design which is efficient in terms of area and power
@@ -485,7 +485,7 @@ The final gate level synthesis:
 1. Maintaining constant propogation
 2. Boolean optimization using K-Map
 
-# DAY 4 INTRODUCTION TO GLS AND SYNTHESIS-SIMULATION MISMATCH
+### DAY 4 INTRODUCTION TO GLS AND SYNTHESIS-SIMULATION MISMATCH
 
 **Gate Level Synthesis (GLS):**
 <details>
