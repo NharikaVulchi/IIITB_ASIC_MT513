@@ -1072,7 +1072,7 @@ GLS simulation:
 **Illustration 2**: DEMUX using case and for
 
 
-case code:
+**case code:**
 
 
 ```
@@ -1103,7 +1103,7 @@ endmodule
 Simulation for case:
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/b773e08a-5f70-4de3-ae37-8ac6516092f2)
 
-Code using for:
+**Code using for:**
 
 ```
 module demux_generate (output o0 , output o1, output o2 , output o3, output o4, output o5, output o6 , output 				o7 , input [2:0] sel  , input i);
@@ -1126,12 +1126,76 @@ Simulation:
 
 
 
+Synthesis:
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/7ad41b32-c506-4798-9a25-c80fb1883b55)
 
-**We can see that the ouput follows input according to select line for both the cases**
+
+
+GLS simulation:
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/c2750f55-dde0-488e-9509-b62223369992)
+
+
+**We can see that the ouput follows input according to select line for both the codes**
+
+
+**Illustration 3** Ripple Carry Adder
+
+
+Full adder
+
+
+```
+module fa (input a , input b , input c, output co , output sum);
+	assign {co,sum}  = a + b + c ;
+endmodule
+```
+
+
+Ripple Carry Adder
+
+
+```
+module rca (input [7:0] num1 , input [7:0] num2 , output [8:0] sum);
+wire [7:0] int_sum;
+wire [7:0]int_co;
+
+genvar i;
+generate
+for (i = 1 ; i < 8; i=i+1) begin
+	fa u_fa_1 (.a(num1[i]),.b(num2[i]),.c(int_co[i-1]),.co(int_co[i]),.sum(int_sum[i]));
+end
+
+endgenerate
+fa u_fa_0 (.a(num1[0]),.b(num2[0]),.c(1'b0),.co(int_co[0]),.sum(int_sum[0]));
+
+
+assign sum[7:0] = int_sum;
+assign sum[8] = int_co[7];
+endmodule
+```
+
+Simulation:
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/43884307-df7f-4141-8f83-b2ff311e8fdf)
+
+
+Synthesis:
+
+
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/c8ea86db-61f3-4225-b6bc-7399e8fa3d5b)
+
+
+```
+read_verilog rca.v fa.v
+synth -top rca
+show rca
+```
 
 GLS simulation:
 
-![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/bb3510ee-e5be-4596-8e8e-b316da1ca9f1)
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/2f644d22-7474-4e12-a82d-b6cef6ab29b9)
+
 
 
 
