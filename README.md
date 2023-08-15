@@ -488,7 +488,7 @@ The final gate level synthesis:
 **Lab sessions**
 
 **Combinational**
-
+<details>
 Illustration 1:
 
 ```
@@ -542,10 +542,13 @@ netlist:
 
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/f24424b5-42ae-4f8a-ba61-21bbe2ef3ba4)
 
+</details>
+
+
 
 **Sequential**
 
-
+<details>
 Example 1:
 
 ```
@@ -630,7 +633,66 @@ Netlist:
 
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/c8d13532-03b0-432b-bf3e-06fec29cb8ec)
 
+</details>
 
+
+**Counter optimization**
+<details>
+Code:
+
+```
+module counter_opt (input clk , input reset , output q);
+reg [2:0] count;
+assign q = count[0];
+
+always @(posedge clk ,posedge reset)
+begin
+	if(reset)
+		count <= 3'b000;
+	else
+		count <= count + 1;
+end
+
+endmodule
+```
+
+
+Synthesis:
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/f577afbb-b1d3-4a53-ac00-2a69bbe95707)
+
+
+Netlist:
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/608f32df-788e-4adb-9105-8ab5cc35beea)
+
+
+Code 2: Infers 3 flipflops even after optimization
+
+```
+module counter_opt (input clk , input reset , output q);
+reg [2:0] count;
+assign q = count==3'b100;
+
+always @(posedge clk ,posedge reset)
+begin
+	if(reset)
+		count <= 3'b000;
+	else
+		count <= count + 1;
+end
+
+endmodule
+```
+
+Synthesis:
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/24c20d18-e194-4e5b-acd4-800a00eb9316)
+
+Netlist:
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/87d00dde-1c20-461f-b499-56f0d5dd9ec0)
+</details>
 
 
 ### DAY 4 INTRODUCTION TO GLS AND SYNTHESIS-SIMULATION MISMATCH
