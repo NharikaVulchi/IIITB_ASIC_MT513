@@ -1,4 +1,4 @@
-# DAY 0 Software Installation
+## DAY 0 Software Installation
 <details>
     <summary>
 Yosys  
@@ -164,7 +164,7 @@ $make test
 
 
 
-# DAY 1 Working with Yosys and iverilog
+## DAY 1 Working with Yosys and iverilog
 <details>
     <summary>
         Introduction
@@ -258,7 +258,7 @@ https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
 </details>
 
 
-# DAY 2 
+## DAY 2 TIMING LIBS AND OPTIMIZATION TECHNIQUES
 <details>
 <summary>
 Introduction to dot lib
@@ -488,7 +488,7 @@ The final gate level synthesis:
 # DAY 4 INTRODUCTION TO GLS AND SYNTHESIS-SIMULATION MISMATCH
 
 **Gate Level Synthesis (GLS):**
-
+<details>
 1. We will run the test bench with netlist as design under test.
 2. Netlist is logically same as RTL code
 3. Gate level verilog models can be timing aware or functional.
@@ -505,9 +505,10 @@ The below figure depicts the GLS synthesis flow:
 
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/3f95024b-bda4-4b11-b2eb-7089f193cd1b)
 
-
+</details>
 **Synthesis Simulation Mismatch**
 
+<details>
 What are the causes?
 
 
@@ -515,7 +516,9 @@ What are the causes?
 2. Blocking vs Non-Blocking Assignment
 3. Non standard verilog coding
 
+</details>
 **Missing sensitivity list**
+
 
 Simulator always looks for a change in activity.
 
@@ -538,7 +541,7 @@ Simulation using gtkwave:
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/43ef2523-b96f-49c6-ac36-cb214c520dfa)
 
 
-
+<details>
 
 This can be corrected by using the following command.
 This makes sure that output is sensitive to any change in input
@@ -552,7 +555,7 @@ always (*)
 The above code has a synthesis simulation mismatch because -->
 1. Synthesiser looks at the functionality and will create a MUX
 2. Whereas a simulator will simulate it consdiering it as double edge flop.
-
+</details>
 **Blocking and Non-blocking statements in verilog**
 
 1. Blocking Assignment [ = ]
@@ -565,6 +568,7 @@ Executes the statements sequentially
 Executes the statements in parallel. RHS is executed and assigned to LHS
 
 **Caveats with Blocking Statements**
+
 
 EXAMPLE 1: Consider the below code:
 
@@ -634,6 +638,7 @@ Here, the latest value of q0 is used in simulation.
 The synthesis of both the codes give the same synthesis output which is not actually happening, so there is a synthesis-simulation mismatch.
 
 So it is important to run GLS and match the output of synthesis and simulation.
+<details>
 
 RTL simulation of Part 1:
 
@@ -655,11 +660,12 @@ GLS simulation of Part 1:
 
 
 We can see that irrespective of expression evaluation , we get the old value of q0 for calculating output.So we can see a synthesis-simulation mismatch for the blocking statement.
+</details>
 # LAB SESSION
 
 **MUX**
 
-
+<details>
 Simulation of the RTL design:
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/43ef2523-b96f-49c6-ac36-cb214c520dfa)
 
@@ -669,8 +675,9 @@ Simulation of the netlist design:
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/58de709f-90d3-4ee2-b813-f45fcfa5eb17)
 
 So the code explained in missing sensitivity list shows synthesis-simulation mismatch.
-
+</details>
 **ternary operator**
+<details>
 Consider the below code:
 
 ```
@@ -695,9 +702,9 @@ Synthesis:
 GLS simulation:
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/f7c896b2-b020-4c7d-96ed-3dab9da913f6)
 
-
+</details>
 **Blocking statement simulation synthesis mismatch**
-
+<details>
 Consider the below code:
 
 
@@ -711,7 +718,7 @@ x = a | b;
 end
 endmodule
 ```
-
+</details>
 
 
 
