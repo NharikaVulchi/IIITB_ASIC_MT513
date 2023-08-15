@@ -485,6 +485,93 @@ The final gate level synthesis:
 1. Maintaining constant propogation
 2. Boolean optimization using K-Map
 
+**Lab sessions**
+
+**Combinational**
+
+Illustration 1:
+
+```
+module opt_check (input a , input b , output y);
+	assign y = a?b:0;
+endmodule
+```
+
+Synthesis:
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/8aeef909-fe53-4901-b4dc-d8445823a398)
+
+
+Netlist:
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/a7a62470-f51a-4000-b448-83ffb9544dbd)
+
+
+Illustration 2:
+
+```
+module opt_check2 (input a , input b , output y);
+	assign y = a?1:b;
+endmodule
+```
+
+Synthesis:
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/e92b72f5-4055-4934-a84c-62c220e3b032)
+
+
+Netlist:
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/8a5bd032-1ecf-462f-8552-989c26b1f4c3)
+
+
+Illustartion 3:
+
+```
+module opt_check3 (input a , input b, input c , output y);
+	assign y = a?(c?b:0):0;
+endmodule
+```
+
+
+Synthesis:
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/234aa9c1-c196-4b80-a60b-721e55d9f6ec)
+
+
+netlist:
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/f24424b5-42ae-4f8a-ba61-21bbe2ef3ba4)
+
+
+**Sequential**
+
+
+Example 1:
+
+```
+module dff_const1(input clk, input reset, output reg q);
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+		q <= 1'b0;
+	else
+		q <= 1'b1;
+end
+endmodule
+```
+
+Synthesis:
+
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/04ab3a4c-16b3-4165-aa2a-a58c9941cded)
+
+
+Netlist:
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/92ddbaf3-d8d9-4d25-a291-ee70265440b8)
+
+
+
 ### DAY 4 INTRODUCTION TO GLS AND SYNTHESIS-SIMULATION MISMATCH
 
 **Gate Level Synthesis (GLS):**
@@ -504,6 +591,8 @@ The below figure depicts the GLS synthesis flow:
 
 
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/3f95024b-bda4-4b11-b2eb-7089f193cd1b)
+
+
 
 </details>
 
