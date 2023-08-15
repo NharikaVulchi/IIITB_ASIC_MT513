@@ -1069,6 +1069,73 @@ GLS simulation:
 </details>
 
 
+**Illustration 2**: DEMUX using case and for
+
+
+case code:
+
+
+```
+module demux_case (output o0 , output o1, output o2 , output o3, output o4, output o5, output o6 , output o7 , input [2:0] sel  , input i);
+reg [7:0]y_int;
+assign {o7,o6,o5,o4,o3,o2,o1,o0} = y_int;
+integer k;
+always @ (*)
+begin
+y_int = 8'b0;
+	case(sel)
+		3'b000 : y_int[0] = i;
+		3'b001 : y_int[1] = i;
+		3'b010 : y_int[2] = i;
+		3'b011 : y_int[3] = i;
+		3'b100 : y_int[4] = i;
+		3'b101 : y_int[5] = i;
+		3'b110 : y_int[6] = i;
+		3'b111 : y_int[7] = i;
+	endcase
+
+end
+endmodule
+
+```
+
+
+Simulation for case:
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/b773e08a-5f70-4de3-ae37-8ac6516092f2)
+
+Code using for:
+
+```
+module demux_generate (output o0 , output o1, output o2 , output o3, output o4, output o5, output o6 , output 				o7 , input [2:0] sel  , input i);
+reg [7:0]y_int;
+assign {o7,o6,o5,o4,o3,o2,o1,o0} = y_int;
+integer k;
+always @ (*)
+begin
+y_int = 8'b0;
+for(k = 0; k < 8; k++) begin
+	if(k == sel)
+	y_int[k] = i;
+end
+end
+endmodule
+```
+
+Simulation:
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/7d8d84c6-b292-4b67-a013-00d5bda08868)
+
+
+
+
+**We can see that the ouput follows input according to select line for both the cases**
+
+GLS simulation:
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/bb3510ee-e5be-4596-8e8e-b316da1ca9f1)
+
+
+
+
 
 
 
