@@ -1031,7 +1031,7 @@ endgenerate
 <summary>
 
 **Illustration 1**: MUX using **for**
-
+</summary>
 
 ```
 module mux_for (input i0 , input i1, input i2 , input i3 , input [1:0] sel  , output reg y);
@@ -1055,7 +1055,7 @@ Simulation:
 
 
 
-</summary>
+
 </details>
 
 
