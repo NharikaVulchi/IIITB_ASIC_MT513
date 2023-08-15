@@ -733,7 +733,7 @@ endmodule
 </details>
 
 
-### DAY 5 IF CASS FOR 
+## DAY 5 IF CASS FOR 
 
 
 **if**
@@ -814,8 +814,7 @@ Caveats in **case**
 
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/2c8eb835-3854-4d69-b1b0-6840035aefe1)
 
-
-# LAB SESSIONS
+**LAB SESSIONS**
 
 **incomplete if** : Latch is inferred due to imcomplete **if** statement
 
