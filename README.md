@@ -1028,10 +1028,10 @@ endgenerate
 
 </summary>
 
-<summary>
+
 
 **Illustration 1**: MUX using **for**
-</summary>
+
 
 ```
 module mux_for (input i0 , input i1, input i2 , input i3 , input [1:0] sel  , output reg y);
@@ -1053,6 +1053,16 @@ Simulation:
 
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/d51e6b78-5007-4f38-87d7-36cb24d451d0)
 
+
+
+Synthesis:
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/1424d106-730f-464a-ad6c-3a0b641b88fa)
+
+
+GLS simulation:
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/bea9c6d9-9387-41fc-b845-fdd05327cce6)
 
 
 
