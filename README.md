@@ -758,6 +758,7 @@ Caution with if:
 
 Inferred Latches(due to inefficient coding) which is due to incomplete if statement.
 
+<details>
 
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/cf835dec-7b90-4c1d-a8a5-4abef9e97391)
 
@@ -779,6 +780,8 @@ end
 Here without the **else** statement, the output is latched on to the previous value which is useful because the ouput should be stable on previous **count** value without **enable** being high.
 
 In a combinational circuit we can not have a inferred latch.
+</details>
+
 
 
 **case**
@@ -810,4 +813,58 @@ Caveats in **case**
 
 
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/2c8eb835-3854-4d69-b1b0-6840035aefe1)
+
+
+# LAB SESSIONS
+
+**incomplete if** : Latch is inferred due to imcomplete **if** statement
+
+```
+module incomp_if (input i0 , input i1 , input i2 , output reg y);
+always @ (*)
+begin
+if(i0)
+	y <= i1;
+end
+endmodule
+```
+
+
+RTL simulation: when i0 is low output is unpredictable
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/f3fec974-80c8-4014-bfc9-c1aaea66e578)
+
+
+Synthesis: D latch is inferred for MUX
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/81fc914e-2b0c-4de7-8146-9fec5e264be8)
+
+
+**illustration 2**
+
+```
+module incomp_if2 (input i0 , input i1 , input i2 , input i3, output reg y);
+always @ (*)
+begin
+	if(i0)
+		y <= i1;
+	else if (i2)
+		y <= i3;
+end
+endmodule
+```
+
+
+RTL simulation: When i0 is high, y is i1 ; when i0 is low, it looks for i2, and if i2 is low, y is constant, if i2 is high , y is i3.
+
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/3d7b5c61-84f9-4813-bda1-d84c0e2ec1fd)
+
+Synthesis: 
+
+
+![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/dde35889-d71e-4d95-9b2c-009a71df3184)
+
+
+
+
+
 
