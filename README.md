@@ -669,7 +669,7 @@ We can see that irrespective of expression evaluation , we get the old value of 
 </details>
 
 
-# LAB SESSION
+**LAB SESSION**
 
 **MUX**
 
