@@ -827,7 +827,7 @@ if(i0)
 end
 endmodule
 ```
-
+<details>
 
 RTL simulation: when i0 is low output is unpredictable
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/f3fec974-80c8-4014-bfc9-c1aaea66e578)
@@ -835,7 +835,7 @@ RTL simulation: when i0 is low output is unpredictable
 
 Synthesis: D latch is inferred for MUX
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/81fc914e-2b0c-4de7-8146-9fec5e264be8)
-
+</details>
 
 **illustration 2**
 
@@ -851,7 +851,7 @@ end
 endmodule
 ```
 
-
+<details>
 RTL simulation: When i0 is high, y is i1 ; when i0 is low, it looks for i2, and if i2 is low, y is constant, if i2 is high , y is i3.
 
 
@@ -861,7 +861,7 @@ Synthesis:
 
 
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/dde35889-d71e-4d95-9b2c-009a71df3184)
-
+</details>
 
 **incomplete case**
 
@@ -876,7 +876,7 @@ endcase
 end
 endmodule
 ```
-
+<details>
 
 This can be inferred as below:
 
@@ -887,6 +887,6 @@ This can be inferred as below:
 RTL:
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/b5a1ac1e-5133-4892-a913-d88973e0e464)
 
-
+</details>
 
 
