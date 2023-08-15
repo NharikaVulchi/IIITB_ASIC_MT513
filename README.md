@@ -543,10 +543,7 @@ Simulation using gtkwave:
 
 
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/43ef2523-b96f-49c6-ac36-cb214c520dfa)
-</details>
 
-
-<details>
 
 
 
@@ -563,6 +560,8 @@ The above code has a synthesis simulation mismatch because -->
 1. Synthesiser looks at the functionality and will create a MUX
 2. Whereas a simulator will simulate it consdiering it as double edge flop.
 </details>
+
+
 **Blocking and Non-blocking statements in verilog**
 
 1. Blocking Assignment [ = ]
