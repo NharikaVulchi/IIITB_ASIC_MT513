@@ -925,7 +925,7 @@ RTL simulation: When **sel** is 10 or 11 **y** is **i2**
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/3d87456a-a008-4d96-bdb1-be337623e049)
 
 
-Synthesis:
+Synthesis: We donot see any latch as seen in earlier case
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/418fedb2-33a5-4d36-b75d-31f21dd8c0bc)
 
 
