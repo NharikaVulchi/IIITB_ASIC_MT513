@@ -658,7 +658,7 @@ assign y = sel?i1:i0;
 endmodule
 ```
 
-We will pbserve the RTL and GLS simulation
+We will observe the RTL and GLS simulation
 
 
 RTL simulation result: output follows input according to select line
@@ -674,6 +674,22 @@ Synthesis:
 GLS simulation:
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/f7c896b2-b020-4c7d-96ed-3dab9da913f6)
 
+
+**Blocking statement simulation synthesis mismatch**
+
+Consider the below code:
+
+
+```
+module blocking_caveat (input a , input b , input  c, output reg d); 
+reg x;
+always @ (*)
+begin
+d = x & c;
+x = a | b;
+end
+endmodule
+```
 
 
 
