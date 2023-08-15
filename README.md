@@ -1,4 +1,4 @@
-![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/9e9233db-90d6-4395-bd10-3150cd660dde)## DAY 0 Software Installation
+## DAY 0 Software Installation
 <details>
     <summary>
 Yosys  
@@ -538,11 +538,12 @@ else
  out = i0;
 end
 ```
-
+<details>
 Simulation using gtkwave:
 
 
 ![image](https://github.com/NharikaVulchi/IIITB_ASIC_MT513/assets/83216569/43ef2523-b96f-49c6-ac36-cb214c520dfa)
+</details>
 
 
 <details>
